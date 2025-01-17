@@ -9,6 +9,12 @@ var numeroSecreto = Math.floor(Math.random() * maxNumeroSecreto) + 1;
 
 console.log(`Número secreto: ${numeroSecreto}`);
 
+var titulo = document.querySelector('h1');
+titulo.innerHTML = 'Juego del número secreto';
+
+var parrafo = document.querySelector('p');
+parrafo.innerHTML = 'Adivina el número secreto que está entre 1 y 100';
+
 while (numeroUsuario != numeroSecreto){
     numeroUsuario = parseInt(prompt(`Dame un número entre 1 y ${maxNumeroSecreto}`));	
 
