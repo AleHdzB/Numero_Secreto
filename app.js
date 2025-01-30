@@ -1,4 +1,5 @@
 var numeroSecreto = GenerarNumeroSecreto();
+var intetos = 1;
 
 
 function verificarIntento() {
@@ -6,16 +7,17 @@ function verificarIntento() {
 
     console.log(numeroSecreto);
     if(numeroIngresado === numeroSecreto){
-        asignarTextoElemento('h1', '¡Felicitaciones! Ganaste');
-        asignarTextoElemento('p', 'El número secreto era ' + numeroSecreto);
+        asignarTextoElemento('p', `¡Felicitaciones! Ganaste en ${intetos} ${intetos === 1 ? 'intento' : 'intentos'}`);	
+        
     }
     else{
         if(numeroIngresado > numeroSecreto){
-            asignarTextoElemento('h1', '¡Fallaste! El número secreto es menor');
+            asignarTextoElemento('p', '¡Fallaste! El número secreto es MENOR');
         }
         else{
-            asignarTextoElemento('h1', '¡Fallaste! El número secreto es mayor');
+            asignarTextoElemento('p', '¡Fallaste! El número secreto es MAYOR');
         }
+        intetos++;
     }
     return;
 }
